@@ -6,7 +6,7 @@ This section details the implementation of the Semi-supervised DenPeak Clusterin
 
 ## Overview
 
-The SSDC algorithm aims to generate temporary centers based on density measures and the minimum distance to a denser point, followed by the assignment, merging, and splitting of clusters. This ensures that no 'cannot-link' constraints are violated. The pseudocode for the algorithm is detailed below, and it's worth noting that step 7.1.1 varies slightly from the original to accommodate scenarios where the density of most points is null. Additionally, the two methods for calculating density present in the original code are implemented: the 'cutoff' method counts the number of points within a threshold distance \(d\), while the 'gaussian' method uses the function \(\phi = e^{-(D_{ij}/d)^2}\) to calculate each point's contribution to the density.
+The SSDC algorithm aims to generate temporary centers based on density measures and the minimum distance to a denser point, followed by the assignment, merging, and splitting of clusters. This ensures that no 'cannot-link' constraints are violated. The pseudocode for the algorithm is detailed below, and it's worth noting that step 7.1.1 varies slightly from the original to accommodate scenarios where the density of most points is null. Additionally, the two methods for calculating density present in the original code are implemented: the 'cutoff' method counts the number of points within a threshold distance $(d)$, while the 'gaussian' method uses the function $(phi = e^{-(D_{ij}/d)^2})$ to calculate each point's contribution to the density.
 
 ### Halo Points
 
